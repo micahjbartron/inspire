@@ -2,7 +2,10 @@ import TodoService from "../services/todo-service.js";
 import store from "../store.js";
 
 //TODO Create the render function
-function _drawTodos() {}
+function _drawTodos() {
+  // let todoList = store.State.todos
+  // let template = 
+}
 
 export default class TodoController {
   constructor() {

@@ -3,28 +3,89 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+<body>
+	<header class="container-fluid">
+		<div class="row bg-info text-center text-light">
+			<div class="col">Get er' done</div>
+		</div>
+	</header>
+	<main class="container-fluid" class="background-pic" id="background-pic">
+		<div class="row mt-2" id="weather">
+			<!-- <div class="col-3">
+				<h1>Your Weather Template</h1>
+				<h3>city:</h3>
+				<h3>temp:</h3>
+			</div> -->
+		</div>
 
-	<div id="quote">
-		The Quote
-	</div>
+		<div class="row text-center justify-content-center" id="currentTime">
+		</div>
 
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
+		<!-- <div class="col">
+				<img src="" alt="">
+			</div> -->
 
+		<!-- <div id="quote">
+			The Quote
+		</div> -->
+		<div class="row" id="todolist">
+			<div class="col-3">
+				<div class="card shadow">
+					<div class="card-body d-flex flex-column">
+						<!-- <i class="fas fa-times text-danger align-self-end action" onclick="app.listController.deleteList()"></i> -->
+						<h4 class="card-title bg-info text-light text-center">ToDo</h4>
+						<ul class="pl-3">
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+								<label class="form-check-label" for="defaultCheck1">
+									Default checkbox
+								</label>
+								<i class="fas fa-times text-danger action" onclick="app.todoController.deleteItem()"></i>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+								<label class="form-check-label" for="defaultCheck2">
+									Disabled checkbox
+								</label>
+							</div>
+						</ul>
+						<form onsubmit="app.todoController.addItem()">
+							<div class="form-group d-flex">
+								<input type="text" class="form-control" name="item" id="item" aria-describedby="helpId"
+									placeholder="Add Items..." required>
+								<button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- <div class="col">
+
+				<div>
+					A Todo List
+					<div id="todo-error"></div>
+					<form onsubmit=""></form>
+					<div id="todos"></div>
+				</div>
+			</div> -->
+		</div>
+	</main>
+	<footer class="container-fluid">
+		<div class="row bg-info text-center text-light" id="quote">
+			<!-- <div class="col">The quote</div> -->
+		</div>
+	</footer>
+	<script src='https://kit.fontawesome.com/d2e00f75e8.js' crossorigin='anonymous'></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>
