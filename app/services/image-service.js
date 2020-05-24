@@ -17,7 +17,7 @@ class ImageService {
   async getPic() {
     //console.log("get that pic")
     let res = await imgApi.get();
-    //console.log(res.data.large_url)
+    console.log(res.data.large_url)
 
     store.commit("image", (res.data.large_url))
 

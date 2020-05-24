@@ -19,3 +19,7 @@ main{
 #myDIV:hover + #hide{
   display: block;
 }
+
+.done{
+  text-decoration: line-through;
+}

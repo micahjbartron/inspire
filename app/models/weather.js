@@ -22,6 +22,7 @@ export default class Weather {
   <h1 class="card-title">Weather</h1>
   <h3>city:${this.city}</h3>
   <h3>temp: ${this.fahrenheit} f</h3>
+  <button>f/c</button>
   </div>
   </div>
 </div>
