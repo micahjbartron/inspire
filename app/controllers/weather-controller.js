@@ -11,14 +11,14 @@ function drawWeather() {
 
   document.getElementById("weather").innerHTML = weather.Template
   //console.log("THE WEATHER MAN SAYS:", store.State.weather);
-  drawTemp()
+  // drawTemp()
 }
-function drawTemp() {
-  let temp = store.State.weather.fahrenheit
-  let template = ''
-  template += `<h3>${temp} f</h3>`
-  document.getElementById("currentTemp").innerHTML = template
-}
+// function drawTemp() {
+//   let temp = store.State.weather.fahrenheit
+//   let template = ''
+//   template += `<h3>${temp} f</h3>`
+//   document.getElementById("currentTemp").innerHTML = template
+// }
 
 function drawTime() {
   setInterval(() => {
@@ -39,10 +39,10 @@ drawTime()
 
 export default class WeatherController {
 
-  toggle(temp) {
-    //console.log(temp);
+  toggle() {
+    // console.log("click");
 
-    WeatherService.getTemp(temp)
+    WeatherService.getTemp()
     //WeatherService.getWeather();
     drawWeather()
   }

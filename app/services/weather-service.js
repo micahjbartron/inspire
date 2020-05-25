@@ -21,21 +21,26 @@ class WeatherService {
     //console.log(res.data);
 
   }
-  // getTemp(temp) {
-  //   let foundTemp = store.State.weather.find(t => t.fahrenheit == temp )
-  //   let currentTemp = 0
-  //   if (temp == store.State.weather.fahrenheit) {
-  //     temp = (temp - 32) * .55
-  //     let currentTemp = temp
-  //     store.State.weather.currentTemp.push(currentTemp)
-  //   } else (temp == store.State.weather.celsius)
-  //   temp = (temp * 1.8) + 32
-  //   currentTemp = temp
+  getTemp() {
+    let toggleTemp = store.State.weather.temp
+    if (toggleTemp == false) {
+      toggleTemp = true
+    } else (toggleTemp = false)
 
-  //   store.State.weather.currentTemp.push(currentTemp)
+    store.State.weather.temp = toggleTemp
+    // let foundTemp = store.State.weather.currentTemp.find(t => t. == temp)
+    // if (foundTemp == temp) {
+    //   temp = (temp - 32) * .55
+    //   let currentTemp = temp
+    //   store.State.weather.currentTemp.push(currentTemp)
+    // } else (temp == store.State.weather.celsius)
+    // temp = (temp * 1.8) + 32
+    // currentTemp = temp
+
+    // store.State.weather.currentTemp.push(currentTemp)
 
 
-  // }
+  }
 
 }
 

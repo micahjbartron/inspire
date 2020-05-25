@@ -12,37 +12,37 @@ export default class Weather {
     this.kelvin = data.main.temp
     this.fahrenheit = Math.round(1.8 * (data.main.temp - 273.15) + 32)
     this.celsius = Math.round(data.main.temp - 273.15)
-    this.currentTemp = ""
+    this.temp = false
   }
 
   get Template() {
     return /*html*/`
-  <div class="col-sm-3 col-12 m-auto">
+  <div class="col-sm-3 col-12">
   <div class="card shadow">
   <div class="card-body bg-dark text-light">
   <h1 class="card-title">Weather</h1>
   <h3>city:${this.city}</h3>
  <div id= "currentTemp">
-  
+  ${this.subTemplate}
   </div>
-  <button onclick="app.weatherController.toggle(${this.currentTemp})">f/c</button>
+  <button onclick="app.weatherController.toggle()">f/c</button>
   </div>
   </div>
 </div>
   `
   }
 
+  get subTemplate() {
+    if (this.temp == false) {
+      return /*html*/`
+      <h3>temp: ${this.fahrenheit} f</h3>
+      `
+    }
+    return `<h3>temp:temp: ${this.celsius} c</h3>`
+  }
 
 
 }
 //  <h3>${this.fahrenheit} f</h3>
 
-// get SubTemplate() {
-//   if (this.fahrenheit) {
-//     return /*html*/`
-//     <h3>temp: ${this.celsius} c</h3>
-//     `
-//   }
-//   return `<h3>temp:temp: ${this.fahrenheit} f</h3>`
-// }
 
