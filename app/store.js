@@ -7,7 +7,7 @@ import Todo from "./models/todo.js"
 let _state = {
   /**@type {Weather} */
   weather: new Weather({ name: "loading", main: { temp: 0.0 } }), //temporary fake data
-  /**@type {Todo[]}*/
+  /**@type {any[]}*/
   todos: [], //TODO change 'any' to your todo model
   image: new Image({}),
   /**@type {Quote} */
