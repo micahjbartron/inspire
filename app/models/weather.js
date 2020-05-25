@@ -38,7 +38,7 @@ export default class Weather {
       <h3>temp: ${this.fahrenheit} f</h3>
       `
     }
-    return `<h3>temp:temp: ${this.celsius} c</h3>`
+    return `<h3>temp: ${this.celsius} c</h3>`
   }
 
 
